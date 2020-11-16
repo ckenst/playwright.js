@@ -1,5 +1,4 @@
 const { firefox } = require('playwright');
-const assert = require('assert');
 
 (async () => {
   const browser = await firefox.launch({ headless: false, slowMo: 50 });
