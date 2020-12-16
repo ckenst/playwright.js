@@ -1,4 +1,5 @@
 const { firefox } = require('playwright');
+// const assert = require('assert').strict;
 
 (async () => {
   const browser = await firefox.launch({ headless: false, slowMo: 50 });
@@ -9,8 +10,8 @@ const { firefox } = require('playwright');
   await page.click('button[type="submit"]');
 
   const successText = await page.innerText('#flash');
-  console.log(successText);
-  assert(successText === 'You logged into a secure area!');
+  // console.log(successText);
+  // assert(successText === "You logged into a secure area!");
 
   // await page.screenshot({ path: `example.png` });
   await browser.close();

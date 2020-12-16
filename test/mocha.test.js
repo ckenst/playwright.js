@@ -17,5 +17,5 @@ afterEach(async () => {
 
 it('should work', async () => {
   await page.goto('https://www.example.com/');
-  assert.equal(await page.title(), 'Example Domain');
+  assert.strictEqual(await page.title(), 'Example Domain');
 });
