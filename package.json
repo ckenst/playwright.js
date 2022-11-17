@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "first.js",
-  "dependencies": {
-    "mocha": "^9.0.3"
-  },
   "devDependencies": {
-    "playwright": "^1.14.0"
+    "playwright": "^1.28.0",
+    "mocha": "^10.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
