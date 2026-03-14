@@ -4,7 +4,7 @@ const { firefox } = require('playwright');
   const browser = await firefox.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto('https://www.example.com/');
+  await page.goto('https://kenst.com/');
   const dimensions = await page.evaluate(() => {
     return {
       width: document.documentElement.clientWidth,
