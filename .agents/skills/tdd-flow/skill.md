@@ -1,14 +1,13 @@
 ---
-name: tdd-flow
-description: Strict Red-Green-Refactor agentic workflow.
+name: ui-tester
+description: Implements Playwright UI tests from user outlines.
 triggers:
-  - user_mentions: ["$tdd", "implement", "build feature"]
+  - file_extension: [".spec.js", ".spec.ts"]
+  - user_mentions: ["implement test", "write the spec"]
 ---
 
-## Workflow Steps
-1. **Red Phase:** Write ONE failing test. Explain the failure. **STOP.**
-2. **Green Phase:** Write the simplest possible implementation to pass that specific test. **STOP.**
-3. **Refactor Phase:** Suggest improvements to the implementation. Do not change tests.
-
-## Constraint
-- Do not jump to Step 2 until the user confirms Step 1 passes (or fails correctly).
+## Workflow
+1. Read the user's outline/comments in the `.spec.js` file.
+2. Implement the full Playwright test using best practices (Locators, `await expect`, etc.).
+3. Adhere to the `ai_instruction` file regarding "No Mocking" and "Semantic Validation."
+4. **Skip TDD:** Provide the full implementation immediately. Do not pause for a "Red" phase.

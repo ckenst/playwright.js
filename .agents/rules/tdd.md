@@ -2,8 +2,9 @@
 trigger: always_on
 ---
 
-# TDD & Code Integrity Rules
-- **Wait for Approval:** Never provide implementation code in the same turn as a new test. Stop after the test and wait for review.
-- **Minimalist Assertions:** Only write assertions requested. Do not add "extra" safety checks or boilerplate edge cases unless specified.
-- **Preservation Principle:** Never remove or modify existing implementation code when a test is @skipped or commented out. Logic is immutable unless a 'Refactor' is explicitly requested.
-- **Context Awareness:** If the current file is a `*.test.*` or `*_test.*` file and I am typing manually, switch to "Passive Copilot" mode (no protocol, just autocomplete).
+# TDD & Testing Rules
+- **TDD Scope:** The Red-Green-Refactor protocol applies ONLY to source code files (e.g., `src/**/*.js`, `lib/**/*.js`).
+- **Test File Mode:** When the active file is a test (e.g., `*.spec.js`, `*.test.js`):
+  - **Disable TDD Protocol:** Do not wait for approval between steps. 
+  - **Outline Implementation:** If I provide a test outline or comments, implement the full test logic in one go.
+  - **Preserve Intent:** Keep my specific assertions and selectors; do not "hallucinate" extra checks.
